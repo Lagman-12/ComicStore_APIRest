@@ -1,0 +1,30 @@
+{
+  "name": "comicstore_apirest",
+  "version": "1.0.0",
+  "description": "Trabajo en clase para la conxion de apis, con mongo db como Base de datos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lagman-12/ComicStore_APIRest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Lagman-12/ComicStore_APIRest/issues"
+  },
+  "homepage": "https://github.com/Lagman-12/ComicStore_APIRest#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "mongoose": "^9.11.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
