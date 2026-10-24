@@ -31,3 +31,28 @@ exports.getAuthorById = async (req, res) => {
     res.status(400).json({ success: false, error: 'ID de autor inválido' });
   }
 };
+
+// Actualizar autor por ID (PUT)
+exports.updateAuthor = async (req, res) => {
+  try {
+    const author = await Author.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true
+    });
+    if (!author) return res.status(404).json({ success: false, error: 'Autor no encontrado' });
+    res.status(200).json({ success: true, data: author });
+  } catch (error) {
+    res.status(400).json({ success: false, error: error.message });
+  }
+};
+
+// Eliminar autor por ID (DELETE)
+exports.deleteAuthor = async (req, res) => {
+  try {
+    const author = await Author.findByIdAndDelete(req.params.id);
+    if (!author) return res.status(404).json({ success: false, error: 'Autor no encontrado' });
+    res.status(200).json({ success: true, message: 'Autor eliminado correctamente' });
+  } catch (error) {
+    res.status(400).json({ success: false, error: 'ID de autor inválido' });
+  }
+};

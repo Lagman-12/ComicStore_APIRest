@@ -1,9 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const { createAuthor, getAuthors, getAuthorById } = require('../controllers/authorController');
+const { 
+  createAuthor, 
+  getAuthors, 
+  getAuthorById, 
+  updateAuthor, 
+  deleteAuthor 
+} = require('../controllers/authorController');
 
-router.post('/', createAuthor);
-router.get('/', getAuthors);
-router.get('/:id', getAuthorById);
+router.route('/')
+  .post(createAuthor)
+  .get(getAuthors);
+
+router.route('/:id')
+  .get(getAuthorById)
+  .put(updateAuthor)
+  .delete(deleteAuthor);
 
 module.exports = router;
