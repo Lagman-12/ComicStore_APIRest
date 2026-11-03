@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ComicStore - Catálogo & Autores</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <h1 class="logo">📚 ComicStore</h1>
+      <nav class="nav">
+        <button id="btn-comics" class="nav-btn active">Cómics</button>
+        <button id="btn-authors" class="nav-btn">Autores</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section id="section-comics" class="content-section">
+      <div class="section-header">
+        <h2>Catálogo de Cómics</h2>
+        <p>Explora nuestras mejores colecciones</p>
+      </div>
+      <div id="comics-grid" class="cards-grid">
+        <p class="loading-text">Cargando catálogo...</p>
+      </div>
+    </section>
+
+    <section id="section-authors" class="content-section hidden">
+      <div class="section-header">
+        <h2>Autores Destacados</h2>
+        <p>Mentes maestras detrás de cada historia</p>
+      </div>
+      <div id="authors-grid" class="cards-grid">
+        <p class="loading-text">Cargando autores...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 ComicStore - Proyecto Web Programming</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

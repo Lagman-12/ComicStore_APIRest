@@ -1,0 +1,38 @@
+:root {
+  --primary: #e63946;
+  --secondary: #1d3557;
+  --bg-light: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-dark: #212529;
+  --text-muted: #6c757d;
+  --border-color: #e9ecef;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+body { background-color: var(--bg-light); color: var(--text-dark); display: flex; flex-direction: column; min-height: 100vh; }
+
+.header { background-color: var(--secondary); color: #fff; padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+.header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-weight: 800; font-size: 1.6rem; }
+.nav { display: flex; gap: 0.8rem; }
+.nav-btn { background: transparent; border: none; color: #fff; padding: 0.5rem 1.2rem; border-radius: 20px; font-weight: 600; cursor: pointer; }
+.nav-btn.active { background-color: var(--primary); }
+
+.main-container { max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem; flex: 1; width: 100%; }
+.section-header { margin-bottom: 2rem; }
+.hidden { display: none !important; }
+
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.8rem; }
+.card { background: var(--card-bg); border-radius: var(--radius); border: 1px solid var(--border-color); box-shadow: var(--shadow); padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; }
+.card-title { font-size: 1.25rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.5rem; }
+.card-subtitle { font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-bottom: 0.8rem; }
+.card-body { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.2rem; }
+.badges-container { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+.badge { background-color: #eef2f6; color: var(--secondary); font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.6rem; border-radius: 12px; }
+.card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 0.8rem; }
+.price { font-size: 1.1rem; font-weight: 800; color: var(--secondary); }
+.stock { font-size: 0.8rem; color: var(--text-muted); }
+.loading-text { grid-column: 1 / -1; text-align: center; color: var(--text-muted); padding: 3rem 0; }
+.footer { background-color: var(--secondary); color: #a0aec0; text-align: center; padding: 1.2rem; margin-top: auto; }
