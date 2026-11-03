@@ -36,3 +36,23 @@ body { background-color: var(--bg-light); color: var(--text-dark); display: flex
 .stock { font-size: 0.8rem; color: var(--text-muted); }
 .loading-text { grid-column: 1 / -1; text-align: center; color: var(--text-muted); padding: 3rem 0; }
 .footer { background-color: var(--secondary); color: #a0aec0; text-align: center; padding: 1.2rem; margin-top: auto; }
+
+.search-container {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+#search-input {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 25px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#search-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px rgba(230, 57, 70, 0.2);
+}
